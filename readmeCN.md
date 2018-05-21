@@ -1,5 +1,5 @@
 # Vuex-Redux
-
+[En](readme.md)<br/>
 这是一个用于帮助Vue使用Redux管理状态的插件。Redux是一个非常流行的状态管理工具。Vuex-Redux为大家提供一个可以在Vue环境下使用Redux的途径。这回带来不同的开发体验。
 
 # 开始
