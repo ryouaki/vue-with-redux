@@ -1,16 +1,16 @@
 # Vuex-Redux
-[中文版](readmeCN.md)
-This is a plugin for Vue to work with Redux. Redux is very popular with React.js. And Vuex-Redux provide a way for you to let Vue work with Redux. This will be a defferent experience.
 
-# Start
+这是一个用于帮助Vue使用Redux管理状态的插件。Redux是一个非常流行的状态管理工具。Vuex-Redux为大家提供一个可以在Vue环境下使用Redux的途径。这回带来不同的开发体验。
 
-First you can install this library from npm
+# 开始
+
+首先你需要通过如下命令安装vuex-redux
 
 ```shell
   npm install -save vuex-redux
 ```
 
-# How to run the demo
+# 运行Demo
 
 ```shell
   git clone https://github.com/ryouaki/vuex-redux.git
@@ -20,10 +20,10 @@ First you can install this library from npm
 
 # Usage
 
-This is the sample you need to do on your entry JavaScript file:
+需要像下面这样改造你的入口文件：
 ```js
-  // entry.js
-  ... // some import you need
+  // 有可能是你的entry.js文件
+  ... // 这里是你引入的其它包
   import VuexRedux from 'vuex-redux';
   import { makeReduxStore } from 'vuex-redux';
   import reduces from 'YOUR-REDUCERS';
@@ -39,7 +39,7 @@ This is the sample you need to do on your entry JavaScript file:
   }).$mount('#app')
 ```
 
-This is the action demo:
+下面是一个actionCreate函数:
 ```js
   export function test() {
     return {
@@ -58,9 +58,9 @@ This is the action demo:
   }
 ```
 
-_**Note**: You do not need redux-thunk for vuex-redux. it work with async code._
+_**Note**: 你并不需要使用redux-thunk，因为vuex-redux已经提供了对异步处理的支持._
 
-This is the reducer demo: 
+这是一个reducer的例子: 
 ```js
   function reduce (state = { count: 0 }, action) {
     switch(action.type) {
@@ -77,7 +77,7 @@ This is the reducer demo:
   };
 ```
 
-This is the demo for Vue Component:
+Vue的组件例子:
 ```js
   <template>
     <div>
@@ -96,7 +96,7 @@ This is the demo for Vue Component:
     props: {
       msg: String
     },
-    // you must initial the statetree which you subscribe from redux in data().
+    // 你必须在这里预先定义你订阅的Redux中的状态。否则编译模版会报错。
     data() {
       return {
         reduce: {}
@@ -112,8 +112,8 @@ This is the demo for Vue Component:
       clickHandler3() {
         this.dispatch(asyncTest());
       },
-      // you must declare a mapReduxState to let vuex-redux know what state should be subscribed.
-      // the parameter [ state ] is the root state of redux.
+      // 你必须实现一个mapReduxState函数，用于告诉vuex-redux你需要订阅哪些redux中的状态
+      //  [ state ] 参数就是redux状态树的根。
       mapReduxState(state) { 
         return {
           reduce: state.reduce
