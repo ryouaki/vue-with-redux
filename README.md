@@ -1,5 +1,5 @@
 # Vuex-Redux
-[中文版](readmeCN.md)
+[中文版](readmeCN.md)<br/>>
 This is a plugin for Vue to work with Redux. Redux is very popular with React.js. And Vuex-Redux provide a way for you to let Vue work with Redux. This will be a defferent experience.
 
 # Start
