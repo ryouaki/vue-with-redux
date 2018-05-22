@@ -1,13 +1,13 @@
-# Vuex-Redux
+# vue-with-redux
 [中文版](readmeCN.md)<br/>
-This is a plugin for Vue to work with Redux. Redux is very popular with React.js. And Vuex-Redux provide a way for you to let Vue work with Redux. This will be a defferent experience.
+This is a plugin for Vue to work with Redux. Redux is very popular with React.js. And vue-with-redux provide a way for you to let Vue work with Redux. This will be a defferent experience.
 
 # Start
 
 First you can install this library from npm
 
 ```shell
-  npm install -save vuex-redux
+  npm install -save vue-with-redux
 ```
 
 # How to run the demo
@@ -58,7 +58,7 @@ This is the action demo:
   }
 ```
 
-_**Note**: You do not need redux-thunk for vuex-redux. it work with async code._
+_**Note**: You do not need redux-thunk for vue-with-redux. it work with async code._
 
 This is the reducer demo: 
 ```js
@@ -112,7 +112,7 @@ This is the demo for Vue Component:
       clickHandler3() {
         this.dispatch(asyncTest());
       },
-      // you must declare a mapReduxState to let vuex-redux know what state should be subscribed.
+      // you must declare a mapReduxState to let vue-with-redux know what state should be subscribed.
       // the parameter [ state ] is the root state of redux.
       mapReduxState(state) { 
         return {

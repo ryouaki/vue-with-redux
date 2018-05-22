@@ -1,13 +1,13 @@
-# Vuex-Redux
+# vue-with-redux
 [En version](readme.md)<br/>
-这是一个用于帮助Vue使用Redux管理状态的插件。Redux是一个非常流行的状态管理工具。Vuex-Redux为大家提供一个可以在Vue环境下使用Redux的途径。这回带来不同的开发体验。
+这是一个用于帮助Vue使用Redux管理状态的插件。Redux是一个非常流行的状态管理工具。vue-with-redux为大家提供一个可以在Vue环境下使用Redux的途径。这回带来不同的开发体验。
 
 # 开始
 
-首先你需要通过如下命令安装vuex-redux
+首先你需要通过如下命令安装vue-with-redux
 
 ```shell
-  npm install -save vuex-redux
+  npm install -save vue-with-redux
 ```
 
 # 运行Demo
@@ -58,7 +58,7 @@
   }
 ```
 
-_**Note**: 你并不需要使用redux-thunk，因为vuex-redux已经提供了对异步处理的支持._
+_**Note**: 你并不需要使用redux-thunk，因为vue-with-redux已经提供了对异步处理的支持._
 
 这是一个reducer的例子: 
 ```js
@@ -112,7 +112,7 @@ Vue的组件例子:
       clickHandler3() {
         this.dispatch(asyncTest());
       },
-      // 你必须实现一个mapReduxState函数，用于告诉vuex-redux你需要订阅哪些redux中的状态
+      // 你必须实现一个mapReduxState函数，用于告诉vue-with-redux你需要订阅哪些redux中的状态
       //  [ state ] 参数就是redux状态树的根。
       mapReduxState(state) { 
         return {
