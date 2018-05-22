@@ -13,7 +13,7 @@ First you can install this library from npm
 # How to run the demo
 
 ```shell
-  git clone https://github.com/ryouaki/vuex-redux.git
+  git clone https://github.com/ryouaki/vue-with-redux.git
   npm install
   npm run serve
 ```
@@ -24,8 +24,8 @@ This is the sample you need to do on your entry JavaScript file:
 ```js
   // entry.js
   ... // some import you need
-  import VuexRedux from 'vuex-redux';
-  import { makeReduxStore } from 'vuex-redux';
+  import VuexRedux from 'vue-with-redux';
+  import { makeReduxStore } from 'vue-with-redux';
   import reduces from 'YOUR-REDUCERS';
   import middlewares from 'REDUX-MIDDLEWARES';
 

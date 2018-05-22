@@ -13,7 +13,7 @@
 # 运行Demo
 
 ```shell
-  git clone https://github.com/ryouaki/vuex-redux.git
+  git clone https://github.com/ryouaki/vue-with-redux.git
   npm install
   npm run serve
 ```
@@ -24,8 +24,8 @@
 ```js
   // 有可能是你的entry.js文件
   ... // 这里是你引入的其它包
-  import VuexRedux from 'vuex-redux';
-  import { makeReduxStore } from 'vuex-redux';
+  import VuexRedux from 'vue-with-redux';
+  import { makeReduxStore } from 'vue-with-redux';
   import reduces from 'YOUR-REDUCERS';
   import middlewares from 'REDUX-MIDDLEWARES';
 
