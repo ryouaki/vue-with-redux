@@ -1,8 +1,9 @@
 <template>
   <div>
-    <button @click="clickHandler1">直接发送Action对象</button>
-    <button @click="clickHandler2">发送同步Action对象</button>
-    <button @click="clickHandler3">发送异步Action对象</button>
+    <button @click="clickHandler1">Action Object</button>
+    <button @click="clickHandler2">Sync Action</button>
+    <button @click="clickHandler3">Async Action</button>
+    <!-- <button @click="clickHandler4">shouldVueUpdate: {{shouldUpdate}}</button> -->
     <p>{{reduce.count}}</p>
   </div>
 </template>
@@ -17,7 +18,8 @@ export default {
   },
   data() {
     return {
-      reduce: {}
+      reduce: {},
+      shouldUpdate: true
     }
   },
   methods: {
@@ -30,11 +32,22 @@ export default {
     clickHandler3() {
       this.dispatch(asyncTest());
     },
+    clickHandler4() {
+      this.shouldUpdate = false;
+    },
     mapReduxState(state) {
       return {
         reduce: state.reduce
       }
     },
+    shouldVueUpdate(newState, oldState) {
+      // Undone 还没实现
+      if (this.shouldUpdate) {
+        return true;
+      } else {
+        return false
+      }
+    }
   }
 }
 </script>

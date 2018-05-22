@@ -81,9 +81,9 @@ This is the demo for Vue Component:
 ```js
   <template>
     <div>
-      <button @click="clickHandler1">直接发送Action对象</button>
-      <button @click="clickHandler2">发送同步Action对象</button>
-      <button @click="clickHandler3">发送异步Action对象</button>
+      <button @click="clickHandler1">Action Object</button>
+      <button @click="clickHandler2">Sync Action</button>
+      <button @click="clickHandler3">Async Action</button>
       <p>{{reduce.count}}</p>
     </div>
   </template>

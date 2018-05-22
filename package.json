@@ -1,20 +1,22 @@
 {
-  "name": "vuex-redux",
-  "version": "1.0.0",
-  "private": true,
+  "name": "vue-with-redux",
+  "version": "1.0.2",
   "scripts": {
-    "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "vue-cli-service serve --open"
   },
+  "authors": [
+    "ryouaki <46517115@qq.com> (https://github.com/ryouaki)"
+  ],
+  "description": "This is a plugin for Vue to work with Redux",
+  "homepage": "https://github.com/ryouaki/vue-with-redux",
   "license": "MIT",
   "dependencies": {
 
   },
   "files": [
-    "dist"
+    "src"
   ],
-  "main": "src/vuex-redux.js",
+  "main": "src/index.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.10",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.10",
@@ -23,6 +25,10 @@
     "vue-template-compiler": "^2.5.13",
     "redux-logger": "^3.0.6",
     "vue": "^2.5.16"
+  },
+  "peerDependencies": {
+    "vue": ">=2.0.0",
+    "redux": ">=4.0.0"
   },
   "babel": {
     "presets": [
