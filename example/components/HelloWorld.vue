@@ -16,12 +16,6 @@ export default {
   props: {
     msg: String
   },
-  data() {
-    return {
-      reduce: {},
-      shouldUpdate: true
-    }
-  },
   methods: {
     clickHandler1() {
       this.dispatch({type: 'TEST'});

@@ -9,25 +9,22 @@ export default {
 };
 
 function reduxMixin() {
-  if (this.$root.$options.store) {
+  const store = this.$root.$options;
+  if (store) {
+    const computeds = this.$options.computeds;
+    const newState = this.mapReduxState(store.getState());
+    
     this.dispatch = (action) => {
-      let getState = this.$root.$options.store.getState;
-      let dispatch = this.$root.$options.store.dispatch;
+      let getState = store.getState;
+      let dispatch = store.dispatch;
       if (typeof action === 'function') {
         action(this.dispatch.bind(this), getState);
       } else {
-        // const oldState = this.mapReduxState(getState());
         dispatch(action);
         const newState = this.mapReduxState(getState());
-        // if ((this.shouldVueUpdate && 
-        //   typeof this.shouldVueUpdate === 'function' && 
-        //   this.shouldVueUpdate(newState, oldState)) || !this.shouldVueUpdate) {
-        //   updateState.call(this);
-        // } else {
-          Object.keys(newState).forEach( (prop) => {
-            this[prop] = newState[prop];
-          })
-        // }
+        Object.keys(newState).forEach( (prop) => {
+          this[prop] = newState[prop];
+        })
       }
     };
     updateState.call(this);
